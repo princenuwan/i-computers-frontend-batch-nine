@@ -1,15 +1,16 @@
-import ProductCard from "./components/productCard";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AdminPage from "./pages/admin";
+import HomePage from "./pages/home";
+import LoginPage from "./pages/login";
 
-function App() {
-
+export default function App() {
   return (
-    <div className="bg-amber-50" >
-      <h1 className="bg-blue-200 text-4xl font-bold tracking-tight text-gray-800 text-center"> Hello world</h1>
-      <img className="rounded-full w-100 h-100 object-cover hover:scale-110 cursor-pointer " src="https://picsum.photos/id/237/200/300" alt="black_dog"/>
-      <p>price = 10000LKR</p>
-      <ProductCard/>
+    <div className="w-full h-screen bg-primary text-secondary">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} /> 
+        <Route path="/admin/*" element={<AdminPage />} />
+      </Routes>
     </div>
-  )
+  );
 }
-
-export default App
