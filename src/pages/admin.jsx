@@ -3,12 +3,12 @@ import { Link, Route, Routes } from "react-router-dom";
 export default function AdminPage(){
     return(
         <div className="w-full h-full flex ">
-            <div className="bg-blue-500 w-[300px] h-full flex flex-col">
+            <div className="bg-accent w-[300px] h-full flex flex-col">
                 <Link to="/admin/">Orders</Link>
                 <Link to="/admin/products">Products</Link>
                 <Link to="/admin/users">Users</Link>            
             </div>
-            <div className="bg-blue-300 w-[calc(100%-300px)] h-full">
+            <div className="w-[calc(100%-300px)] h-full">
                 <Routes>
                     <Route path ="/" element = {<h1>Oders Page</h1>}/>
                     <Route path ="/products" element = {<h1>Products Page</h1>}/>
